@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="MealCooked">
+		<defName>Mahri_Brigadeiro</defName>
+		<label>brigadeiro</label>
+		<description>Brigadeiro is a traditional Brazilian dessert. It's a chocolate fudge ball, usually eaten in parties.</description>
+		<graphicData>
+			<texPath>Things/Item/Meals/Mahri_Brigadeiro</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<drawSize>0.6</drawSize>
+		</graphicData>
+		<statBases>
+            <DeteriorationRate>0.25</DeteriorationRate>
+			<MarketValue>15</MarketValue>
+			<WorkToMake>350</WorkToMake>
+			<Nutrition>0.1</Nutrition>
+		</statBases>
+		<ingestible>
+			<preferability>DesperateOnly</preferability>
+			<foodType>Processed</foodType>
+			<joy>0.10</joy>
+			<joyKind>Social</joyKind>
+			<maxNumToIngestAtOnce>4</maxNumToIngestAtOnce>
+			<ingestSound>Meal_Eat</ingestSound>
+			<ingestEffect>EatVegetarian</ingestEffect>
+		  </ingestible>
+	</ThingDef>
+
+	<ThingDef ParentName="MealCooked">
+		<defName>Mahri_Brisadeiro</defName>
+		<label>brisadeiro</label>
+		<description>Brisadeiro is an edible made with brigadeiro and smokeleaf butter</description>
+		<graphicData>
+			<texPath>Things/Item/Meals/Mahri_Brisadeiro</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<drawSize>0.6</drawSize>
+		</graphicData>
+		<statBases>
+            <DeteriorationRate>0.25</DeteriorationRate>
+			<MarketValue>15</MarketValue>
+			<WorkToMake>350</WorkToMake>
+			<Nutrition>0.1</Nutrition>
+		</statBases>
+		<ingestible>
+			<preferability>DesperateOnly</preferability>
+			<foodType>Processed</foodType>
+			<joy>0.10</joy>
+			<joyKind>Chemical</joyKind>
+			<maxNumToIngestAtOnce>4</maxNumToIngestAtOnce>
+			<ingestSound>Meal_Eat</ingestSound>
+			<ingestEffect>EatVegetarian</ingestEffect>
+			<nurseable>true</nurseable>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+				  <hediffDef>SmokeleafHigh</hediffDef>
+				  <severity>0.8</severity>
+				  <toleranceChemical>Smokeleaf</toleranceChemical>
+				</li>
+				<li Class="IngestionOutcomeDoer_OffsetNeed">
+				  <need>Rest</need>
+				  <offset>-0.2</offset>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+				  <hediffDef>SmokeleafTolerance</hediffDef>
+				  <severity>0.030</severity>
+				  <divideByBodySize>true</divideByBodySize>
+				</li>
+			  </outcomeDoers>
+		  </ingestible>
+		  <comps>
+			<li Class="CompProperties_Drug">
+			  <chemical>Smokeleaf</chemical>
+			  <addictiveness>0.020</addictiveness>
+			  <minToleranceToAddict>0.15</minToleranceToAddict>
+			  <existingAddictionSeverityOffset>0.06</existingAddictionSeverityOffset>
+			  <needLevelOffset>0.9</needLevelOffset>
+			  <listOrder>20</listOrder>
+			</li>
+		  </comps>
+	</ThingDef>
+    </Defs>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <RecipeDef Name="Mahri_CookBrigadeiroBase" ParentName="CookMealBase" Abstract="True">
+		<workAmount>350</workAmount>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<requiredGiverWorkType>Cooking</requiredGiverWorkType>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+		<workSkill>Cooking</workSkill>
+		<recipeUsers>
+			<li>FueledStove</li>
+			<li>ElectricStove</li>
+		</recipeUsers>
+	</RecipeDef>
+
+    <RecipeDef Name="Mahri_CookBrigadeiroBulkBase" ParentName="CookMealBase" Abstract="True">
+		<workAmount>1300</workAmount>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<requiredGiverWorkType>Cooking</requiredGiverWorkType>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+		<workSkill>Cooking</workSkill>
+		<recipeUsers>
+			<li>FueledStove</li>	
+			<li>ElectricStove</li>			
+		</recipeUsers>
+	</RecipeDef>
+
+    <!--Brigadeiro-->
+    <RecipeDef ParentName="Mahri_CookBrigadeiroBase">
+		<defName>Mahri_CookBrigadeiro</defName>
+		<label>make brigadeiro</label>
+		<description>Make a single brigadeiro.</description>
+		<jobString>Making brigadeiro.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Milk</li>
+					</thingDefs>
+				</filter>
+				<count>0.3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Chocolate</li>
+					</thingDefs>
+				</filter>
+				<count>0.3</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Chocolate</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Mahri_Brigadeiro>1</Mahri_Brigadeiro>
+		</products>
+	</RecipeDef>
+
+    <RecipeDef ParentName="Mahri_CookBrigadeiroBulkBase">
+		<defName>Mahri_CookbrigadeiroBulk</defName>
+		<label>make brigadeiro x4</label>
+		<description>Make 4 brigadeiros.</description>
+		<jobString>Making 4 brigadeiros.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Milk</li>
+					</thingDefs>
+				</filter>
+				<count>1.2</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Chocolate</li>
+					</thingDefs>
+				</filter>
+				<count>1.2</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Chocolate</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Mahri_Brigadeiro>4</Mahri_Brigadeiro>
+		</products>
+	</RecipeDef>
+
+	<!--Brisadeiro-->
+	<RecipeDef ParentName="Mahri_CookBrigadeiroBase">
+		<defName>Mahri_CookBrisadeiro</defName>
+		<label>make brisadeiro</label>
+		<description>Make a single brisadeiro.</description>
+		<jobString>Making brisadeiro.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Milk</li>
+					</thingDefs>
+				</filter>
+				<count>0.3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Chocolate</li>
+					</thingDefs>
+				</filter>
+				<count>0.3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SmokeleafLeaves</li>
+					</thingDefs>
+				</filter>
+				<count>0.3</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Chocolate</li>
+				<li>SmokeleafLeaves</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Mahri_Brisadeiro>1</Mahri_Brisadeiro>
+		</products>
+	</RecipeDef>
+
+    <RecipeDef ParentName="Mahri_CookBrigadeiroBulkBase">
+		<defName>Mahri_CookbrisadeiroBulk</defName>
+		<label>make brisadeiro x4</label>
+		<description>Make 4 brisadeiros.</description>
+		<jobString>Making 4 brisadeiros.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Milk</li>
+					</thingDefs>
+				</filter>
+				<count>1.2</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Chocolate</li>
+					</thingDefs>
+				</filter>
+				<count>1.2</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SmokeleafLeaves</li>
+					</thingDefs>
+				</filter>
+				<count>1.2</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Chocolate</li>
+				<li>SmokeleafLeaves</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Mahri_Brisadeiro>4</Mahri_Brisadeiro>
+		</products>
+	</RecipeDef>
+</Defs>
